@@ -1,12 +1,8 @@
-*, *::before, *::after, :root {
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-@import 'https://fonts.googleapis.com/css?family=Overlock:400,400i,700|Oleo+Script';
-html, body {
-  height: 100%;
 }
 
 body {
@@ -18,16 +14,173 @@ body {
 }
 
 a, a:visited {
-  color: #252934;
-  font-size: 1.4rem;
   text-decoration: none;
-  -webkit-transition: 200ms;
   transition: 200ms;
+  -webkit-transition: 200ms;
 }
 
-a:hover, a:active {
-  color: #f300b4;
+/*-------------------Landing page--------------------*/
+
+#home {
+  background: #202736;
+  background: -webkit-gradient(linear, left top, left bottom, from(#13071A), color-stop(80%, #583A69));
+  background: linear-gradient(to bottom, #13071A 0%, #583A69 80%);
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  margin: 0 auto;
+  z-index: 1;
 }
+
+#home::before {
+  content: '';
+  position: fixed;
+  background: url(/assets/svg/stars.svg);
+  background-attachment: fixed;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: stars-move-in 1000ms 300ms forwards;
+  animation: stars-move-in 1000ms 300ms forwards;
+}
+
+@-webkit-keyframes stars-move-in {
+  from {
+    background-position-y: -100px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 0;
+  }
+}
+
+@keyframes stars-move-in {
+  from {
+    background-position-y: -100px;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 0;
+  }
+}
+
+.grass {
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+  background: url(/assets/svg/grass.svg) bottom left repeat-x;
+  background-size: cover;
+  width: 100%;
+  height: 80%;
+  opacity: 0;
+  -webkit-animation: grass-move-in 1000ms 500ms forwards;
+  animation: grass-move-in 1000ms 500ms forwards;
+  border-bottom: 300px solid #181d23;
+}
+
+@-webkit-keyframes grass-move-in {
+  from {
+    background-position-y: 150%;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 100%;
+  }
+}
+
+@keyframes grass-move-in {
+  from {
+    background-position-y: 150%;
+  }
+  to {
+    opacity: 1;
+    background-position-y: 100%;
+  }
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(/assets/svg/rocket.svg) bottom left no-repeat;
+  width: 50%;
+  height: 50%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: rocket-move-in 1000ms 800ms forwards;
+  animation: rocket-move-in 1000ms 800ms forwards;
+}
+
+@-webkit-keyframes rocket-move-in {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    opacity: 1;
+    background-position-x: 50%;
+  }
+}
+
+@keyframes rocket-move-in {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    opacity: 1;
+    background-position-x: 50%;
+  }
+}
+
+.moon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  position: fixed;
+  background: url(/assets/svg/moon.svg) right 150% no-repeat;
+  background-size: 40% 40%;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-animation: moon-move-in 1.2s 1s forwards;
+  animation: moon-move-in 1.2s 1s forwards;
+}
+
+@-webkit-keyframes moon-move-in {
+  from {
+    opacity: 0;
+    background-position: right 150%;
+  }
+  to {
+    opacity: 1;
+    background-position: top right;
+  }
+}
+
+@keyframes moon-move-in {
+  from {
+    opacity: 0;
+    background-position: right 150%;
+  }
+  to {
+    opacity: 1;
+    background-position: top right;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*****************
  *****************
@@ -453,157 +606,12 @@ a:hover, a:active {
   }
 }
 
-/*-------------------Hero image--------------------*/
 
-#home {
-  background: #202736;
-  background: -webkit-gradient(linear, left top, left bottom, from(#13071A), color-stop(80%, #583A69));
-  background: linear-gradient(to bottom, #13071A 0%, #583A69 80%);
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
-  min-height: 100vh;
-  margin: 0 auto;
-  z-index: 1;
-}
 
-#home::before {
-  content: '';
-  position: fixed;
-  background: url(/assets/svg/stars.svg);
-  background-attachment: fixed;
-  width: 100%;
-  min-height: 100vh;
-  z-index: -1;
-  opacity: 0;
-  -webkit-animation: stars-move-in 1000ms 300ms forwards;
-  animation: stars-move-in 1000ms 300ms forwards;
-}
 
-@-webkit-keyframes stars-move-in {
-  from {
-    background-position-y: -100px;
-  }
-  to {
-    opacity: 1;
-    background-position-y: 0;
-  }
-}
 
-@keyframes stars-move-in {
-  from {
-    background-position-y: -100px;
-  }
-  to {
-    opacity: 1;
-    background-position-y: 0;
-  }
-}
 
-.grass {
-  position: absolute;
-  bottom: -300px;
-  left: 0;
-  background: url(/assets/svg/grass.svg) bottom left repeat-x;
-  background-size: cover;
-  width: 100%;
-  height: 80%;
-  opacity: 0;
-  -webkit-animation: forest-move-in 1000ms 500ms forwards;
-  animation: forest-move-in 1000ms 500ms forwards;
-  border-bottom: 300px solid #181d23;
-}
 
-@-webkit-keyframes forest-move-in {
-  from {
-    background-position-y: 150%;
-  }
-  to {
-    opacity: 1;
-    background-position-y: 100%;
-  }
-}
-
-@keyframes forest-move-in {
-  from {
-    background-position-y: 150%;
-  }
-  to {
-    opacity: 1;
-    background-position-y: 100%;
-  }
-}
-
-.silhouette {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background: url(/assets/svg/rocket.svg?sanitize=true) bottom left no-repeat;
-  width: 50%;
-  height: 50%;
-  opacity: 0;
-  z-index: -1;
-  -webkit-animation: silhouette-move-in 1000ms 800ms forwards;
-  animation: silhouette-move-in 1000ms 800ms forwards;
-}
-
-@-webkit-keyframes silhouette-move-in {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    opacity: 1;
-    background-position-x: 50%;
-  }
-}
-
-@keyframes silhouette-move-in {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    opacity: 1;
-    background-position-x: 50%;
-  }
-}
-
-.moon {
-  position: absolute;
-  top: 0;
-  right: 0;
-  position: fixed;
-  background: url(/assets/svg/moon.svg?sanitize=true) right 150% no-repeat;
-  background-size: 40% 40%;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0;
-  -webkit-animation: moon-move-in 1.2s 1s forwards;
-  animation: moon-move-in 1.2s 1s forwards;
-}
-
-@-webkit-keyframes moon-move-in {
-  from {
-    opacity: 0;
-    background-position: right 150%;
-  }
-  to {
-    opacity: 1;
-    background-position: top right;
-  }
-}
-
-@keyframes moon-move-in {
-  from {
-    opacity: 0;
-    background-position: right 150%;
-  }
-  to {
-    opacity: 1;
-    background-position: top right;
-  }
-}
 
 /* Copy and CTA */
 
@@ -648,8 +656,6 @@ a:hover, a:active {
   font-style: italic;
   color: #fafafa;
 }
-
-
 
 #home .container .buttons {
   display: -webkit-box;
@@ -727,7 +733,7 @@ a:hover, a:active {
       right: 50%;
     }
   }
-  .silhouette {
+  .rocket {
     width: 100%;
   }
 }
