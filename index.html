@@ -9,7 +9,9 @@
   <meta name="description" content="Portfolio Website by Django Heimgartner">
   <meta name="keywords" content="portfolio, coding, programming, web, development, developer, fullstack">
 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+
   <title>Portfolio Page</title>
 </head>
 
@@ -22,37 +24,35 @@
   <div id="app">
 
 
+ 
 
-    <!--Navbar-->
-    <div class="menu-container">
-      <div class="overlay"></div>
-      <div class="menu-items">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <div class="social"><a href="https://twitter.com/yagoestevez" target="_blank" rel="noopener noreferrer"
-            title="Link to author&#39;s Twitter profile"> <i class="fab fa-twitter"></i></a><a id="profile-link"
-            href="https://github.com/yagoestevez" target="_blank" rel="noopener noreferrer"
-            title="Link to author&#39;s GitHub Profile"> <i class="fab fa-github"></i></a><a
-            href="https://codepen.io/yagoestevez" target="_blank" rel="noopener noreferrer"
-            title="Link to author&#39;s Codepen Profile"> <i class="fab fa-codepen"></i></a></div>
-      </div>
+
+
+
+
+
+
+
+
+
+<!--Navbar-->
+<div class="fixed-top">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="p-4">
+      <h5 class="text-white h4">Collapsed content</h5>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
     </div>
-    <!--Navbar end-->
+  </div>
+  <nav class="navbar navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+<!--Navbar end-->
 
 
 
-
-
-
-    <nav id="navbar">
-      <div class="nav-wrapper">
-        <p class="brand">Django<strong> Heimgartner</strong></p><a class="menu-button"><span></span></a>
-      </div>
-    </nav>
 
 
 
@@ -184,7 +184,7 @@
     <footer>
       <div class="wrapper">
         <h3>THANKS FOR VISITING</h3>
-        <p>© 2020 Yago Estévez.</p>
+        <p>© 2020 Django Heimgartner</p>
         <div class="social"><a href="https://twitter.com/yagoestevez" target="_blank" rel="noopener noreferrer"
             title="Link to author&#39;s Twitter profile"> <i class="fab fa-twitter"></i></a><a id="profile-link"
             href="https://github.com/yagoestevez" target="_blank" rel="noopener noreferrer"
@@ -195,6 +195,10 @@
     </footer>
   </div>
 
+      <!--Jquery, Bootstrap-->
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>
