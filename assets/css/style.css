@@ -19,7 +19,7 @@ a, a:visited {
   -webkit-transition: 200ms;
 }
 
-/*-------------------Landing page--------------------*/
+/*-----------------------------Landing page------------------------------*/
 
 #home {
   background: #202736;
@@ -171,27 +171,7 @@ a, a:visited {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Copy and CTA */
+/*------------------------Landing page container-------------------------*/
 
 #home .container {
   width: -webkit-fit-content;
@@ -316,6 +296,20 @@ a, a:visited {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*****************
  *****************
    ABOUT STYLES
@@ -328,8 +322,8 @@ a, a:visited {
   font-size: 1.4rem;
   position: relative;
   background: #fafafa;
-  -webkit-clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
-  clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 50% 6%, 100% 0, 100% 100%, 80% 95%, 0 100%);
+  clip-path: polygon(0 0, 50% 6%, 100% 0, 100% 100%, 80% 95%, 0 100%);
   z-index: 5;
   background: #fafafa url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Author_BG.jpg) center right no-repeat;
   background-attachment: fixed;
@@ -411,20 +405,23 @@ a, a:visited {
   }
 }
 
-@media only screen and (max-width: 949px) {
-  #about {
-    -webkit-clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
-    clip-path: polygon(0 0, 20% 2%, 100% 0, 100% 100%, 80% 98%, 0 100%);
-    background-position: top left;
-    background-size: cover;
-  }
-}
-
 @media only screen and (max-width: 649px) {
   #about .wrapper {
     padding: 10rem 2rem 8rem;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*****************
  *****************
@@ -773,11 +770,14 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   }
 }
 
-/*****************
- *****************
-   FOOTER STYLES
- *****************
- *****************/
+
+
+
+
+
+
+
+/*------------------------Landing page container-------------------------*/
 
 footer {
   font-size: 1rem;
