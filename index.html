@@ -8,183 +8,129 @@
   <meta name="author" content="Django Heimgartner">
   <meta name="description" content="Portfolio Website by Django Heimgartner">
   <meta name="keywords" content="portfolio, coding, programming, web, development, developer, fullstack">
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
   <title>Portfolio Page</title>
 </head>
 
 <body>
 
-
-
-
-
-  <div id="app">
-
-
- 
-
-
-
-
-
-
-
-
-
-
-<!--Navbar-->
-<div class="fixed-top">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="p-4">
-      <h5 class="text-white h4">Collapsed content</h5>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
+  <!--Navbar-->
+  <div class="fixed-top">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="p-4">
+        <h5 class="text-white h4">Collapsed content</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
     </div>
+    <nav class="navbar navbar-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
   </div>
-  <nav class="navbar navbar-dark">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div>
-<!--Navbar end-->
+  <!--Navbar end-->
 
-
-
-
-
-
-    <header id="home">
-      <div class="grass"></div>
-      <div class="rocket"></div>
-      <div class="moon"></div>
-      <div class="container">
-        <h1>
-          <span class="line">Hello, I'm <span class="color">Django</span></span>
-          <span class="line">a full-stack developer</span>
-        </h1>
-        <div class="buttons">
-          <a href="#about">Get to know me</a>
-          <a href="#contact" class="cta">Contact me</a></div>
+  <!--Home-->
+  <header id="home">
+    <div class="grass"></div>
+    <div class="rocket"></div>
+    <div class="moon"></div>
+    <div class="container">
+      <h1>
+        <span class="line">Hello, I'm <span class="color">Django</span></span>
+        <span class="line">a full-stack developer</span>
+      </h1>
+      <div class="buttons">
+        <a href="#about">Get to know me</a>
+        <a href="#contact" class="cta">Contact me</a>
       </div>
-    </header>
+    </div>
+  </header>
+  <!--Home end-->
 
-
-
-
-    <section id="about">
-      <div class="wrapper">
-        <article>
-          <div class="title">
-            <h3>Who's this guy?</h3>
-            <p class="separator"></p>
-          </div>
-          <div class="desc full">
-            <h4 class="subtitle">My name is Yago.</h4>
-            <p>I am a web developer and UX designer based in the beautiful west coast of Spain, Galicia.</p>
-            <p>I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning
-              new things; the more, the better. I also love photography, a hobby I'm taking along since the good old
-              film cameras. Oh, and rice with milk; I have a passion for rice with milk!</p>
-          </div>
-          <div class="title">
-            <h3>What does he do?</h3>
-            <p class="separator"></p>
-          </div>
-          <div class="desc">
-            <h4 class="subtitle">I'm a programmer.</h4>
-            <p>For the front-end I usually work with Javascript, either standalone or including popular frameworks like
-              ReactJS and VueJS. I also make the web pretty by using Sass, CSS and, whenever needed, any of their
-              friends: Bootstrap, Bulma, etc.</p>
-            <p>For the back-end I also work with Javascript (NodeJS, Express, MongoDB, etc). But, of course, whenever
-              the project requires PHP, I do PHP as well (Wordpress, Laravel, etc).</p>
-          </div>
-          <div class="desc">
-            <h4 class="subtitle">Also a designer.</h4>
-            <p>I feel comfortable working with many Adobe products. Photoshop, Illustrator, InDesign, Lightroom or Xd
-              are some kind of industry standards and I love working with them. I'm not limited to them, though: Gimp,
-              Inkscape or Figma are also very valid applications that I've been working with.</p>
-            <p>User interfaces, brochures, books, branding... You name it! As I mentioned, creating pretty things is
-              particularly important for me.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-    <section id="projects">
-      <div class="projects-container">
-        <div class="heading">
-          <h3 class="title">My Works</h3>
+  
+  <section id="about">
+    <div class="wrapper">
+      <article>
+        <div class="title">
+          <h3>Who am I?</h3>
           <p class="separator"></p>
-          <p class="subtitle">Here's a list of <u>most</u> of the projects I've been working on lately. All of these
-            were built during my coding camp adventure on <a href="https://www.freecodecamp.org/" target="_blank"
-              rel="noopener noreferrer">freeCodeCamp</a>, where I've been coding for almost 7 months non-stop until I
-            completed all the projects required to get my Full-Stack Developer certification.</p>
         </div>
-        <div class="projects-wrapper">
-          <div class="project"><a class="project-link" href="https://yagoestevez-anon-msg-board.glitch.me/"
-              target="_blank" rel="noopener noreferrer"><img class="project-image" src="./AnonMsgBoard.jpg"
-                alt="Screenshot of Anonymous Message Board."></a>
-            <div class="project-details">
-              <div class="project-tile">
-                <p class="icons"><i class="fab fa-js-square"></i><i class="fab fa-css3-alt"></i><i
-                    class="fab fa-react"></i><i class="fab fa-node"></i></p>Anonymous Message Board.
-              </div><small>Built using Node, Express, MongoDB, CSS + Bulma, React.js and React Router.</small>
-              <p>This is a full-stack website that I made which lets the users read and post anonymous messages and
-                replies.</p>
-              <div class="buttons"><a href="https://github.com/yagoestevez/anonymous-message-board" target="_blank"
-                  rel="noopener noreferrer">View source <i class="fas fa-external-link-alt"></i></a><a
-                  href="https://yagoestevez-anon-msg-board.glitch.me/" target="_blank" rel="noopener noreferrer">Try it
-                  Live <i class="fas fa-external-link-alt"></i></a></div>
-            </div>
+        <div class="desc full">
+          <h4 class="subtitle">My name is Yago.</h4>
+          <p>I am a web developer and UX designer based in the beautiful west coast of Spain, Galicia.</p>
+          <p>I really enjoy solving problems as well as making things pretty and easy to use. I can't stop learning
+            new things; the more, the better. I also love photography, a hobby I'm taking along since the good old
+            film cameras. Oh, and rice with milk; I have a passion for rice with milk!</p>
           </div>
+      </article>
+    </div>
+  </section>
 
-          <div class="project"><a class="project-link" href="https://codepen.io/yagoestevez/full/QxOLKX/"
-              target="_blank" rel="noopener noreferrer"><img class="project-image" src="./Documentify.jpg"
-                alt="Screenshot of Technical Documentation Page."></a>
-            <div class="project-details">
-              <div class="project-tile">
-                <p class="icons"><i class="fab fa-js-square"></i><i class="fab fa-react"></i><i
-                    class="fab fa-css3-alt"></i></p>Technical Documentation Page.
-              </div><small>Built using React and CSS.</small>
-              <p>A technical documentation page made for a little React library I published on NPM.</p>
-              <div class="buttons"><a href="https://github.com/yagoestevez/documentify" target="_blank"
-                  rel="noopener noreferrer">View source <i class="fas fa-external-link-alt"></i></a><a
-                  href="https://codepen.io/yagoestevez/full/QxOLKX/" target="_blank" rel="noopener noreferrer">Try it
-                  Live <i class="fas fa-external-link-alt"></i></a></div>
-            </div>
+
+
+
+
+
+
+
+
+  <section id="projects">
+    <div class="projects-container">
+      <div class="heading">
+        <h3 class="title">My Works</h3>
+        <p class="separator"></p>
+        <p class="subtitle">Here's a list of <u>most</u> of the projects I've been working on lately. All of these
+          were built during my coding camp adventure on <a href="https://www.freecodecamp.org/" target="_blank"
+            rel="noopener noreferrer">freeCodeCamp</a>, where I've been coding for almost 7 months non-stop until I
+          completed all the projects required to get my Full-Stack Developer certification.</p>
+      </div>
+      <div class="projects-wrapper">
+        <div class="project"><a class="project-link" href="https://yagoestevez-anon-msg-board.glitch.me/"
+            target="_blank" rel="noopener noreferrer"><img class="project-image" src="./AnonMsgBoard.jpg"
+              alt="Screenshot of Anonymous Message Board."></a>
+          <div class="project-details">
+            <div class="project-tile">
+              <p class="icons"><i class="fab fa-js-square"></i><i class="fab fa-css3-alt"></i><i
+                  class="fab fa-react"></i><i class="fab fa-node"></i></p>Anonymous Message Board.
+            </div><small>Built using Node, Express, MongoDB, CSS + Bulma, React.js and React Router.</small>
+            <p>This is a full-stack website that I made which lets the users read and post anonymous messages and
+              replies.</p>
+            <div class="buttons"><a href="https://github.com/yagoestevez/anonymous-message-board" target="_blank"
+                rel="noopener noreferrer">View source <i class="fas fa-external-link-alt"></i></a><a
+                href="https://yagoestevez-anon-msg-board.glitch.me/" target="_blank" rel="noopener noreferrer">Try it
+                Live <i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+        </div>
+
+        <div class="project"><a class="project-link" href="https://codepen.io/yagoestevez/full/QxOLKX/" target="_blank"
+            rel="noopener noreferrer"><img class="project-image" src="./Documentify.jpg"
+              alt="Screenshot of Technical Documentation Page."></a>
+          <div class="project-details">
+            <div class="project-tile">
+              <p class="icons"><i class="fab fa-js-square"></i><i class="fab fa-react"></i><i
+                  class="fab fa-css3-alt"></i></p>Technical Documentation Page.
+            </div><small>Built using React and CSS.</small>
+            <p>A technical documentation page made for a little React library I published on NPM.</p>
+            <div class="buttons"><a href="https://github.com/yagoestevez/documentify" target="_blank"
+                rel="noopener noreferrer">View source <i class="fas fa-external-link-alt"></i></a><a
+                href="https://codepen.io/yagoestevez/full/QxOLKX/" target="_blank" rel="noopener noreferrer">Try it
+                Live <i class="fas fa-external-link-alt"></i></a></div>
           </div>
         </div>
       </div>
-    </section>
-    <section id="contact">
-      <div class="container">
-        <div class="heading-wrapper">
-          <div class="heading">
-            <p class="title">Want to <br>contact me?</p>
-            <p class="separator"></p>
-            <p class="subtitle">Please, use the form below or send an email to <span class="mail">web<i
-                  class="fas fa-at at"></i>yagoestevez<i class="fas fa-circle dot"></i>com</span>:</p>
-          </div>
-          <div class="social"><a href="https://twitter.com/yagoestevez" target="_blank" rel="noopener noreferrer"
-              title="Link to author&#39;s Twitter profile"> <i class="fab fa-twitter"></i></a><a id="profile-link"
-              href="https://github.com/yagoestevez" target="_blank" rel="noopener noreferrer"
-              title="Link to author&#39;s GitHub Profile"> <i class="fab fa-github"></i></a><a
-              href="https://codepen.io/yagoestevez" target="_blank" rel="noopener noreferrer"
-              title="Link to author&#39;s Codepen Profile"> <i class="fab fa-codepen"></i></a></div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <div class="heading-wrapper">
+        <div class="heading">
+          <p class="title">Want to <br>contact me?</p>
+          <p class="separator"></p>
+          <p class="subtitle">Please, use the form below or send an email to <span class="mail">web<i
+                class="fas fa-at at"></i>yagoestevez<i class="fas fa-circle dot"></i>com</span>:</p>
         </div>
-        <form id="contact-form" action="https://cdpn.io/yagoestevez/fullpage/oapQEJ#"><input placeholder="Name"
-            name="name" type="text" required="" data-cip-id="cIPJQ342845639"><input placeholder="Email" name="email"
-            type="email" required="" data-cip-id="cIPJQ342845640"><textarea placeholder="Message" type="text"
-            name="message"></textarea><input class="button" id="submit" type="submit" value="Submit"></form>
-      </div>
-    </section>
-
-
-    <footer>
-      <div class="wrapper">
-        <h3>THANKS FOR VISITING</h3>
-        <p>© 2020 Django Heimgartner</p>
         <div class="social"><a href="https://twitter.com/yagoestevez" target="_blank" rel="noopener noreferrer"
             title="Link to author&#39;s Twitter profile"> <i class="fab fa-twitter"></i></a><a id="profile-link"
             href="https://github.com/yagoestevez" target="_blank" rel="noopener noreferrer"
@@ -192,13 +138,33 @@
             href="https://codepen.io/yagoestevez" target="_blank" rel="noopener noreferrer"
             title="Link to author&#39;s Codepen Profile"> <i class="fab fa-codepen"></i></a></div>
       </div>
-    </footer>
-  </div>
+      <form id="contact-form" action="https://cdpn.io/yagoestevez/fullpage/oapQEJ#"><input placeholder="Name"
+          name="name" type="text" required="" data-cip-id="cIPJQ342845639"><input placeholder="Email" name="email"
+          type="email" required="" data-cip-id="cIPJQ342845640"><textarea placeholder="Message" type="text"
+          name="message"></textarea><input class="button" id="submit" type="submit" value="Submit"></form>
+    </div>
+  </section>
 
-      <!--Jquery, Bootstrap-->
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <footer>
+    <div class="wrapper">
+      <h3>THANKS FOR VISITING</h3>
+      <p>© 2020 Django Heimgartner</p>
+      <div class="social"><a href="https://twitter.com/yagoestevez" target="_blank" rel="noopener noreferrer"
+          title="Link to author&#39;s Twitter profile"> <i class="fab fa-twitter"></i></a><a id="profile-link"
+          href="https://github.com/yagoestevez" target="_blank" rel="noopener noreferrer"
+          title="Link to author&#39;s GitHub Profile"> <i class="fab fa-github"></i></a><a
+          href="https://codepen.io/yagoestevez" target="_blank" rel="noopener noreferrer"
+          title="Link to author&#39;s Codepen Profile"> <i class="fab fa-codepen"></i></a></div>
+    </div>
+  </footer>
+
+
+  <!--Jquery, Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <!--Jquery, Bootstrap end-->
 </body>
 
 </html>
