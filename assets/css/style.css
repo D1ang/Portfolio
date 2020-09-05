@@ -36,7 +36,7 @@ a, a:visited {
 #home::before {
   content: '';
   position: fixed;
-  background: url(./assets/svg/stars.svg);
+  background: url(../svg/stars.svg);
   background-attachment: fixed;
   width: 100%;
   min-height: 100vh;
@@ -104,7 +104,7 @@ a, a:visited {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url(/assets/svg/rocket.svg) bottom left no-repeat;
+  background: url(../svg/rocket.svg) bottom left no-repeat;
   width: 50%;
   height: 50%;
   opacity: 0;
@@ -138,7 +138,7 @@ a, a:visited {
   top: 0;
   right: 0;
   position: fixed;
-  background: url(/assets/svg/moon.svg) right 150% no-repeat;
+  background: url(../svg/moon.svg) right 150% no-repeat;
   background-size: 40% 40%;
   background-attachment: fixed;
   width: 100%;
@@ -415,7 +415,7 @@ a, a:visited {
   font-size: 1.4rem;
   position: relative;
   background: #f0f0f0;
-  background: #181d23 url(/.assets/img/space.jpg) no-repeat right;
+  background: #181d23 url(../img/space.jpg) no-repeat right;
   background-attachment: fixed;
   background-size: cover;
   
