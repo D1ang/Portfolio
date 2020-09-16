@@ -19,6 +19,10 @@ a, a:visited {
   -webkit-transition: 200ms;
 }
 
+.title {
+  padding: 80px 0 40px 0;
+}
+
 /*-----------------------------Landing page------------------------------*/
 
 #home {
@@ -295,18 +299,14 @@ a, a:visited {
   }
 }
 
-/*------------------------------About page-------------------------------*/
+/*-----------------------------About section-----------------------------*/
 
 #about {
   min-height: 100%;
   position: relative;
   z-index: 5;
-  clip-path: polygon( 0 0, 50% 5%, 100% 0, 100% 80%, 50% 85%, 0 80%);
+  clip-path: polygon( 0 0, 50% 5%, 100% 0, 100% 100%, 50% 100%, 0 100%);
   background: rgb(245, 245, 245);
-}
-
-#about .title {
-  padding: 80px 0 40px 0;
 }
 
 #about p {
@@ -326,173 +326,81 @@ a, a:visited {
   margin-top: -50px;
 }
 
-/*****************
- *****************
-  PROJECTS STYLES
- *****************
- *****************/
+/*----------------------------Projects section---------------------------*/
 
 #projects {
-  height: 2000px;
-  min-height: 100vh;
-  font-size: 1.4rem;
+  min-height: 100%;
   position: relative;
-  background: #181d23 url(../svg/surface.svg) no-repeat right;
+  z-index: 1;
+  background: rgb(24, 29, 35) url(../svg/surface.svg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin: -10rem;
-  z-index: 1;
+  font-size: 1.4rem;
 }
 
-#projects a, #projects a:visited {
-  color: #f300b4;
+#projects p {
+  color: rgb(255, 255, 255);
 }
 
-#projects a:hover, #projects a:active {
-  color: #252934;
+#projects small {
+  color: rgb(129, 129, 129);
 }
 
-/* Single Project */
-
-#projects .project {
-  margin: 1rem auto;
-  width: 100%;
-  padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-gap: 2rem;
+#projects .project-card {
+  background-color: rgba(88, 88, 88, 0.28);
 }
 
-/* Project Image */
-
-#projects .project .project-link {
+#projects .project-link {
   display: block;
-  margin: auto 0;
-  color: #252934;
   overflow: hidden;
-  text-align: center;
   border-radius: 50%;
   border: 1px solid #fafafa;
-  box-shadow: 0 20px 10px -10px #25293450;
-  -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-#projects .project .project-link:hover {
-  box-shadow: 0 50px 15px -30px #25293450;
-}
-
-#projects .project .project-link:hover>img {
-  -webkit-filter: saturate(1);
+#projects .project-link:hover>img {
   filter: saturate(1);
-  -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
 
-#projects .project .project-image {
-  width: 50%;
-  height: 50%;
-  -webkit-transform: scale(1.2);
+#projects .project-image {
+  width: 100%;
+  height: 100%;
   transform: scale(1.2);
-  -webkit-filter: saturate(0);
   filter: saturate(0);
-  -webkit-transition: all 300ms;
   transition: all 300ms;
 }
 
-/* Project Details */
-
-#projects .project .project-details {
-  margin: auto 0;
-}
-
-#projects .project-details .project-tile {
+#projects .project-title {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 0;
-  color: #f300b4;
+  color: rgb(54, 211, 180);
 }
 
-/* Icons */
+/*-Buttons-*/
 
-#projects .project-details .icons {
-  margin: 0;
-  color: #252934;
-}
-
-#projects .project-details .icons i {
-  margin-right: .4rem;
-  font-weight: normal;
-  font-size: 1.4rem;
-}
-
-/* Text */
-
-#projects .project-details small {
-  font-style: italic;
-}
-
-#projects .project-details p {
-  margin: 1rem 0;
-}
-
-/* Buttons */
-
-#projects .project-details .buttons {
-  display: -webkit-box;
+#projects .buttons {
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
-#projects .project-details .buttons a {
+#projects .buttons a {
   width: 49%;
   padding: .5rem;
-  border: none;
-  border-bottom: 1px solid #f300b4;
-  color: #252934;
-  background: #fafafa;
   font-size: 1.2rem;
   text-align: center;
+  color: #252934;
+  background: #fafafa;
 }
 
-#projects .project-details .buttons a:hover {
-  background: #f300b4;
+#projects .buttons a:hover {
+  text-decoration: none;
   color: #fafafa;
+  background: rgb(54, 211, 180);
 }
 
-#projects .project-details .buttons i {
-  font-size: .8rem;
-  vertical-align: middle;
-  margin-left: .5rem;
-  ;
-}
-
-@media only screen and (max-width: 1149px) {
-  #projects .project {
-    grid-template-columns: 1fr 2fr;
-  }
-}
-
-@media only screen and (max-width: 949px) {
-  #projects .project {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media only screen and (max-width: 649px) {
-  #projects {
-    background: #f0f0f0;
-  }
-  #projects .projects-container {
-    padding: 12rem 0 8rem;
-  }
-  #projects .project {
-    padding: 2rem 0;
-  }
-}
 
 /*****************
  *****************
@@ -630,19 +538,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
   color: #f300b4;
 }
 
-@media only screen and (max-width: 1149px) {
-  #contact .social a {
-    display: block;
-  }
-}
 
-@media only screen and (max-width: 649px) {
-  #contact {
-    -webkit-clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 0 100%);
-    padding: 0;
-  }
-}
 
 /*------------------------Landing page container-------------------------*/
 
