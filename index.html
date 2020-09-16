@@ -52,26 +52,24 @@
   <!--About-->
   <section id="about">
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-10 offset-md-1">
-          <article>
-            <div class="title mt-4">
-              <h3>Who am I?</h3>
-            </div>
-            <div class="desc full">
-              <p>
-                <img src="../assets/img/profile.png" alt="Smiley face"
-                  style="float:left;width:230px;padding-right: 20px; margin-top: -50px;">
-                I am a fullstack developer based in green heart of The Netherlands.
-              </p>
-              <p>
-                I really enjoy solving puzzles and problems as well as making things nice and easy to use.
-                I can't stop learning new things; the more, the better. 
-                I also love creating video, a hobby I'm taking along vacations since 
-                the good old camcorders. Oh, and games; I have a passion for Nintendo games.
-              </p>
-            </div>
-          </article>
+      <h1 class="title text-center text-uppercase">Who am I?</h1>
+      <div class="col-md-10 offset-md-1">
+
+        <div class="box">
+          <div class="col-lg-3 col-sm-12">
+            <img class="profile-img float-left mr-4" src="../assets/img/profile.png" alt="Hello I'm Django">
+          </div>
+          <div class="col-lg-12 col-sm-12">
+            <p>
+              I am a fullstack developer based in green heart of The Netherlands.
+            </p>
+            <p>
+              I really enjoy solving puzzles and problems as well as making things nice and easy to use.
+              I can't stop learning new things; the more, the better.
+              I also love creating video, a hobby I'm taking along vacations since
+              the good old camcorders. Oh, and games; I have a passion for Nintendo games.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -87,55 +85,68 @@
 
 
   <section id="projects">
-    <div class="projects-container">
+    <div class="container-fluid">
+      <div class="row bg-success">
+        <div class="col bg-danger">
 
-      <div class="heading">
-        <h3 class="title">My Projects</h3>
-        <p class="separator"></p>
-        <p class="subtitle">Here's a list of <u>most</u> of the projects I've been working on lately. All of these
-          were built during my coding camp adventure on <a href="https://www.freecodecamp.org/" target="_blank"
-            rel="noopener noreferrer">freeCodeCamp</a>, where I've been coding for almost 7 months non-stop until I
-          completed all the projects required to get my Full-Stack Developer certification.</p>
-      </div>
-
-      <div class="projects-wrapper">
-
-        <div class="project bg-warning"><a class="project-link" href="https://yagoestevez-anon-msg-board.glitch.me/"
-            target="_blank" rel="noopener noreferrer"><img class="project-image" src="./AnonMsgBoard.jpg"
-              alt="Screenshot of Anonymous Message Board."></a>
-          <div class="project-details">
-            <div class="project-tile">
-              <p class="icons"><i class="fab fa-js-square"></i><i class="fab fa-css3-alt"></i><i
-                  class="fab fa-react"></i><i class="fab fa-node"></i></p>Anonymous Message Board.
-            </div><small>Built using Node, Express, MongoDB, CSS + Bulma, React.js and React Router.</small>
-            <p>This is a full-stack website that I made which lets the users read and post anonymous messages and
-              replies.</p>
-            <div class="buttons"><a href="https://github.com/yagoestevez/anonymous-message-board" target="_blank"
-                rel="noopener noreferrer">View source <i class="fas fa-external-link-alt"></i></a><a
-                href="https://yagoestevez-anon-msg-board.glitch.me/" target="_blank" rel="noopener noreferrer">Try it
-                Live <i class="fas fa-external-link-alt"></i></a></div>
+          <div class="heading border border-danger">
+            <h3 class="title">My Projects</h3>
+            <p class="separator"></p>
+            <p class="subtitle">Here's a list of <u>most</u> of the projects I've been working on lately. All of these
+              were built during my coding camp adventure on <a href="https://www.freecodecamp.org/" target="_blank"
+                rel="noopener noreferrer">freeCodeCamp</a>, where I've been coding for almost 7 months non-stop until I
+              completed all the projects required to get my Full-Stack Developer certification.</p>
           </div>
-        </div>
 
-        <div class="project bg-warning"><a class="project-link" href="https://codepen.io/yagoestevez/full/QxOLKX/" target="_blank"
-            rel="noopener noreferrer"><img class="project-image" src="./Documentify.jpg"
-              alt="Screenshot of Technical Documentation Page."></a>
-          <div class="project-details">
-            <div class="project-tile bg-war">
-              <p class="icons"><i class="fab fa-js-square"></i><i class="fab fa-react"></i><i
-                  class="fab fa-css3-alt"></i></p>Technical Documentation Page.
-            </div><small>Built using React and CSS.</small>
-            <p>A technical documentation page made for a little React library I published on NPM.</p>
-            <div class="buttons"><a href="https://github.com/yagoestevez/documentify" target="_blank"
-                rel="noopener noreferrer">View source <i class="fas fa-external-link-alt"></i></a><a
-                href="https://codepen.io/yagoestevez/full/QxOLKX/" target="_blank" rel="noopener noreferrer">Try it
-                Live <i class="fas fa-external-link-alt"></i></a></div>
-
-          </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="project border border-info">
+
+            <a class="project-link" href="#" target="_blank">
+              <img class="project-image" src="assets/img/test.jpg" alt="#">
+            </a>
+
+            <div class="project-details border border-danger">
+              <div class="project-tile border border-warning">
+                Milestone Project 1
+              </div>
+
+              <small>Built using Node, Express, MongoDB, CSS + Bulma, React.js and React Router.</small>
+
+              <p>
+                This is a full-stack website that I made which lets the users read and post anonymous messages and
+                replies.
+              </p>
+
+              <div class="buttons">
+                <a href="#" target="_blank">
+                  View source <i class="fas fa-external-link-alt"></i>
+                </a>
+                <a href="#" target="_blank">
+                  Try it Live <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
     </div>
   </section>
+
+
+
+
+
+
   <section id="contact">
     <div class="container">
       <div class="heading-wrapper">

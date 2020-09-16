@@ -137,7 +137,7 @@ a, a:visited {
   top: 0;
   right: 0;
   position: fixed;
-  background: url(../svg/moon.svg)  no-repeat;
+  background: url(../svg/moon.svg) no-repeat;
   background-size: 40% 40%;
   width: 100%;
   height: 100%;
@@ -298,111 +298,33 @@ a, a:visited {
 /*------------------------------About page-------------------------------*/
 
 #about {
-  height: 100%;
-  font-size: 1.4rem;
+  min-height: 100%;
   position: relative;
-  background: #aa1111;
-  -webkit-clip-path: polygon(0 0, 50% 6%, 100% 0, 100% 100%, 80% 95%, 0 100%);
-  clip-path: polygon(0 0, 50% 6%, 100% 0, 100% 100%, 80% 95%, 0 100%);
   z-index: 5;
-  background: #f5f5f5 url(../img/django.png) bottom right no-repeat;
-  background-attachment: fixed;
-  background-size: 900px;
-}
-
-#about .wrapper {
-  padding: 15rem 10rem 12rem;
-  height: 100%;
-  min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-#about article {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1rem;
-  padding: 3rem 0;
+  clip-path: polygon( 0 0, 50% 5%, 100% 0, 100% 80%, 50% 85%, 0 80%);
+  background: rgb(245, 245, 245);
 }
 
 #about .title {
-  grid-column-end: span 4;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-}
-
-#about .title h3 {
-  font-size: 2.4rem;
-}
-
-#about .separator {
-  background: #f300b4;
-  width: 150px;
-  height: 2px;
-  margin: 1rem 0;
-  padding: 0;
-}
-
-#about .subtitle {
-  font-size: 1.6rem;
-  text-align: center;
-  color: inherit;
-  padding-bottom: 1.5rem;
+  padding: 80px 0 40px 0;
 }
 
 #about p {
-  padding-bottom: 1.5rem;
-  color: #555;
-  line-height: 1.9rem;
+  font-size: 1.4rem;
+  color: rgb(129, 127, 127);
 }
 
-#about .desc.full {
-  grid-column-end: span 4;
-  margin-bottom: 2rem;
-}
-
-#about .desc {
-  grid-column-end: span 2;
-  background: #ffffffaa;
+#about .box {
+  min-height: 280px;
   padding: 2rem;
   text-align: justify;
+  background: rgb(255, 255, 255);
 }
 
-@media only screen and (max-width: 1149px) {
-  #about article {
-    grid-template-columns: 1fr;
-    grid-gap: 0;
-  }
-  #about .desc.full {
-    grid-column-end: -1;
-  }
-  #about .desc {
-    grid-column-end: -1;
-  }
+#about .profile-img {
+  width: 230px;
+  margin-top: -50px;
 }
-
-@media only screen and (max-width: 649px) {
-  #about .wrapper {
-    padding: 10rem 2rem 8rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*****************
  *****************
@@ -411,30 +333,16 @@ a, a:visited {
  *****************/
 
 #projects {
+  height: 2000px;
   min-height: 100vh;
   font-size: 1.4rem;
   position: relative;
-  background: #f0f0f0;
   background: #181d23 url(../svg/surface.svg) no-repeat right;
   background-attachment: fixed;
   background-size: cover;
-  
-  min-height: 100vh;
   margin: -10rem;
   z-index: 1;
-  
 }
-
-
-
-
-
-
-
-
-
-
-
 
 #projects a, #projects a:visited {
   color: #f300b4;
@@ -444,43 +352,11 @@ a, a:visited {
   color: #252934;
 }
 
-/* Container */
-
-#projects .projects-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  width: 100%;
-  padding: 12rem 5rem 8rem;
-}
-
-/* Heading */
-
-#projects .heading .title {
-  text-align: center;
-  font-size: 2.4rem;
-  line-height: 2.4rem;
-}
-
-#projects .heading .separator {
-  background: #f300b4;
-  width: 150px;
-  height: 2px;
-  margin: 1rem auto;
-}
-
-#projects .heading .subtitle {
-  font-size: 1.4rem;
-  text-align: center;
-  width: 70%;
-  margin: 0 auto;
-  text-align: justify;
-}
-
 /* Single Project */
 
 #projects .project {
   margin: 1rem auto;
-  width: 70%;
+  width: 100%;
   padding: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -515,7 +391,8 @@ a, a:visited {
 }
 
 #projects .project .project-image {
-  width: 100%;
+  width: 50%;
+  height: 50%;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   -webkit-filter: saturate(0);
@@ -766,13 +643,6 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     padding: 0;
   }
 }
-
-
-
-
-
-
-
 
 /*------------------------Landing page container-------------------------*/
 
