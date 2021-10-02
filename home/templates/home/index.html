@@ -102,6 +102,17 @@
 
 
 
+
+
+
+
+
+
+
+  
+
+
+
 <!--Projects-->
 <section id="projects">
   <div class="container">
@@ -116,29 +127,57 @@
       </p>
     </div>
 
+
+
+
+
+  {% for project in projects %}
     <div class="project-card row my-5 p-4">
+
+
       <div class="col-lg-4">
-        <a class="project-link" href="#" target="_blank">
-          <img class="project-image" src="./assets/img/mp1.jpg" alt="Milestone project 1">
+        <a class="project-link" href="{{ project.demo }}" target="_blank">
+          <img class="project-image" src="{{ project.image.url }}" alt="{{ project.title }}">
         </a>
       </div>
+
+
       <div class="col-lg-8 mt-5">
-        <div class="project-title">Milestone Project 1</div>
-        <small>Built using: Node, Html, CSS & Bootstrap</small>
+        <div class="project-title">{{ project.title }}</div>
+        <small>Built using: {{ project.codebase }}</small>
         <p>
-          The main goal is to make the company known on the web and to trigger the new customers attention.
-          The customer base will be mostly business to business in sports.
+          {{ project.explanation }}
         </p>
         <div class="buttons mt-5">
-          <a href="#" target="_blank">View source</a>
-          <a href="#" target="_blank">Try it live</a>
+          <a href="{{ project.source }}" target="_blank">View source</a>
+          <a href="{{ project.demo }}" target="_blank">Try it live</a>
         </div>
       </div>
+
+
+
     </div>
+  {% endfor %}
+
+
+
+<br>
+<br>
+<br>
 
   </div>
 </section>
 <!--Projects end-->
+
+
+
+
+
+
+
+
+
+
 
 <!--Contact-->
 <section id="contact">
