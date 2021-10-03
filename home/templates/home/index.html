@@ -56,14 +56,9 @@
 
         <!-- Slider -->
         <div class="slider responsive">
-          <div><img src="http://placehold.it/200x150" alt=""></div>
-          <div><img src="http://placehold.it/200x150" alt=""></div>
-          <div><img src="http://placehold.it/200x150" alt=""></div>
-          <div><img src="http://placehold.it/200x150" alt=""></div>
-          <div><img src="http://placehold.it/200x150" alt=""></div>
-          <div><img src="http://placehold.it/200x150" alt=""></div>
-          <div><img src="http://placehold.it/200x150" alt=""></div>
-          <div><img src="http://placehold.it/200x150" alt=""></div>
+          {% for video in videos %}
+            <div><img src="{{ video.image.url }}" alt="{{ video.title }}"></div>
+          {% endfor %}
         </div>
 
         <!-- control arrows -->
@@ -81,22 +76,6 @@
   </div>
 </section>
 <!--About end-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
 
 <!--Projects-->
 <section id="projects">
