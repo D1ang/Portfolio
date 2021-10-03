@@ -25,22 +25,16 @@
 </head>
 
 <body>
-  <header>
-    {% block navbar %}
-      {% include 'navbar.html' %}
-    {% endblock %}
-  </header>
+  {% block navbar %}
+    {% include 'navbar.html' %}
+  {% endblock %}
 
-  <main>
-    {% block content %}
-    {% endblock  %}
-  </main>
+  {% block content %}
+  {% endblock  %}
 
-  <footer>
-    {% block footer %}
-      {% include 'footer.html' %}
-    {% endblock %}
-  </footer>
+  {% block footer %}
+    {% include 'footer.html' %}
+  {% endblock %}
 
   {% block corejs %}
     <!--Jquery, Materialize and JavaScript-->

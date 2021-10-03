@@ -310,22 +310,23 @@ a, a:visited {
 
 #about {
   min-height: 100%;
+  padding-bottom: 100px;
   position: relative;
   z-index: 5;
   clip-path: polygon( 0 0, 50% 5%, 100% 0, 100% 100%, 50% 100%, 0 100%);
-  background: rgb(245, 245, 245);
+  background: hsl(0, 0%, 96%);
 }
 
 #about p {
   font-size: 1.4rem;
-  color: rgb(129, 127, 127);
+  color: hsl(0, 1%, 50%);
 }
 
 #about .box {
   min-height: 280px;
   padding: 2rem;
   text-align: justify;
-  background: rgb(255, 255, 255);
+  background: hsl(0, 0%, 100%);
 }
 
 #about .profile-img {
@@ -343,6 +344,7 @@ a, a:visited {
   background: rgb(24, 29, 35) url(../svg/surface.svg) no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin-top: -80px;
   font-size: 1.4rem;
 }
 
@@ -473,6 +475,10 @@ input[type="text"], input[type="email"], input[type="text"]:not(output):not(:foc
   color: rgb(250, 250, 250);
   background: rgb(0, 0, 0);
 }
+
+
+
+
 
 
 

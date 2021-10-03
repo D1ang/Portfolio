@@ -25,73 +25,58 @@
 <!--About-->
 <section id="about">
   <div class="container-fluid">
-    <h1 class="title text-center">Who am I?</h1>
-    <div class="col-md-10 offset-md-1">
 
-      <div class="box">
-        <div class="col-lg-3 col-sm-12">
-          <img class="profile-img float-left mr-4" src="{% static 'img/profile.png' %}" alt="Hello I'm Django">
+    <div class="row">
+      <h1 class="title text-center">Who am I?</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="box">
+          <div class="col-lg-3 col-sm-12">
+            <img class="profile-img float-start" src="{% static 'img/profile.png' %}" alt="Hello I'm Django">
+          </div>
+          <div class="col-lg-12 col-sm-12">
+            <p>
+              I am a fullstack developer based in the green heart of The Netherlands.
+            </p>
+            <p>
+              I really enjoy solving puzzles and problems as well as making things nice and easy to use.
+              I can't stop learning new things; the more, the better.
+              I also love creating video, a hobby I'm taking along vacations since
+              the good old camcorders. Oh, and games; I have a passion for Nintendo games.
+            </p>
+          </div>
         </div>
-        <div class="col-lg-12 col-sm-12">
-          <p>
-            I am a fullstack developer based in the green heart of The Netherlands.
-          </p>
-          <p>
-            I really enjoy solving puzzles and problems as well as making things nice and easy to use.
-            I can't stop learning new things; the more, the better.
-            I also love creating video, a hobby I'm taking along vacations since
-            the good old camcorders. Oh, and games; I have a passion for Nintendo games.
-          </p>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col">
+
+        <!-- Slider -->
+        <div class="slider responsive">
+          <div><img src="http://placehold.it/200x150" alt=""></div>
+          <div><img src="http://placehold.it/200x150" alt=""></div>
+          <div><img src="http://placehold.it/200x150" alt=""></div>
+          <div><img src="http://placehold.it/200x150" alt=""></div>
+          <div><img src="http://placehold.it/200x150" alt=""></div>
+          <div><img src="http://placehold.it/200x150" alt=""></div>
+          <div><img src="http://placehold.it/200x150" alt=""></div>
+          <div><img src="http://placehold.it/200x150" alt=""></div>
         </div>
+
+        <!-- control arrows -->
+        <div class="prev">
+          <i class="fas fa-arrow-circle-right"></i>
+        </div>
+        
+        <div class="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        </div>
+
       </div>
     </div>
-
-
-
-
-
-<!-- partial:index.partial.html -->
-<div class="container-fluid mt-5">
-  <div class="row">
-    <div class="col-md-12 heroSlider-fixed">
-      <div class="overlay">
-    </div>
-
-       <!-- Slider -->
-      <div class="slider responsive">
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-        <div><img src="http://placehold.it/200x150" alt=""></div>
-      </div>
-
-       <!-- control arrows -->
-      <div class="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      </div>
-      
-      <div class="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      </div>
-      
-    </div>
-  </div>
-</div>
-<!-- partial -->
-
-
-
-
-
-
-
-
-
-
 
   </div>
 </section>
