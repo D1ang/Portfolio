@@ -1,0 +1,47 @@
+[
+    {
+        "model": "videos.videoitem",
+        "pk": 1,
+        "fields": {
+            "title": "Hong Kong",
+            "source": "https://youtu.be/mOhFg9wLIzE",
+            "image": "videos/hongKong.jpg"
+        }
+    },
+    {
+        "model": "videos.videoitem",
+        "pk": 2,
+        "fields": {
+            "title": "Paris",
+            "source": "https://youtu.be/VjpJ_uU4FRQ",
+            "image": "videos/paris.jpg"
+        }
+    },
+    {
+        "model": "videos.videoitem",
+        "pk": 3,
+        "fields": {
+            "title": "Japanase KitKats",
+            "source": "https://youtu.be/MHItmNKZwrg",
+            "image": "videos/kitKats.jpg"
+        }
+    },
+    {
+        "model": "videos.videoitem",
+        "pk": 4,
+        "fields": {
+            "title": "Kos island",
+            "source": "https://youtu.be/rEq32vQhilM",
+            "image": "videos/kos.jpg"
+        }
+    },
+    {
+        "model": "videos.videoitem",
+        "pk": 5,
+        "fields": {
+            "title": "Scribble Flow",
+            "source": "https://youtu.be/jme8VaaUzbI",
+            "image": "videos/scibbleFlow.jpg"
+        }
+    }
+]

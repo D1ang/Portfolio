@@ -1,0 +1,26 @@
+[
+    {
+        "model": "projects.projectitem",
+        "pk": 1,
+        "fields": {
+            "title": "El1te",
+            "codebase": "Node, Html, CSS",
+            "explanation": "The main goal is to make the company known on the web and to trigger the new customers attention. The customer base will be mostly business to business in sports.",
+            "source": "https://github.com/D1ang/EL1TE",
+            "demo": "https://d1ang.github.io/EL1TE",
+            "image": "artwork/el1te.jpg"
+        }
+    },
+    {
+        "model": "projects.projectitem",
+        "pk": 2,
+        "fields": {
+            "title": "DIGIdesigner",
+            "codebase": "HTML, CSS & JS",
+            "explanation": "For a silkscreen-press company a need for a design tool has been requested. The main goal of the tool is to make the job of our studio employees easier and more efficient.",
+            "source": "https://github.com/D1ang/DIGIdesigner",
+            "demo": "https://d1ang.github.io/DIGIdesigner/",
+            "image": "artwork/digidesigner.png"
+        }
+    }
+]
