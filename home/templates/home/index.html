@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -57,7 +58,7 @@
         <!-- Slider -->
         <div class="slider responsive">
           {% for video in videos %}
-            <div><img src="{{ video.image.url }}" alt="{{ video.title }}"></div>
+            <a href="{{ video.source }}" target="_blank"><img src="{{ video.image.url }}" alt="{{ video.title }}"></a>
           {% endfor %}
         </div>
 
@@ -80,84 +81,79 @@
 <!--Projects-->
 <section id="projects">
   <div class="container">
-    <h1 class="title text-center">My projects</h1>
+
+    <div class="row mt-5">
+      <h1 class="title text-center">My projects</h1>
+    </div>
 
     <div class="row">
-      <p class="text-center">
-        Here's a list of the projects I've been working on lately.
-        All of these were built during my coding adventure on Code Institute,
-        where I've been coding for almost 7 months non-stop until
-        I completed all the milestone projects required to get my diploma in software development.
-      </p>
+      <div class="col">
+        <p class="text-center">
+          Here's a list of the projects I've been working on lately.
+          All of these were built during my coding adventure on Code Institute,
+          where I've been coding for almost 7 months non-stop until
+          I completed all the milestone projects required to get my diploma in software development.
+        </p>
+      </div>
     </div>
 
-
-
-
-
-  {% for project in projects %}
-    <div class="project-card row my-5 p-4">
-
-
-      <div class="col-lg-4">
-        <a class="project-link" href="{{ project.demo }}" target="_blank">
-          <img class="project-image" src="{{ project.image.url }}" alt="{{ project.title }}">
-        </a>
-      </div>
-
-
-      <div class="col-lg-8 mt-5">
-        <div class="project-title">{{ project.title }}</div>
-        <small>Built using: {{ project.codebase }}</small>
-        <p>
-          {{ project.explanation }}
-        </p>
-        <div class="buttons mt-5">
-          <a href="{{ project.source }}" target="_blank">View source</a>
-          <a href="{{ project.demo }}" target="_blank">Try it live</a>
+    {% for project in projects %}
+      <div class="row project-card my-5 p-4">
+        <div class="col-lg-4">
+          <a class="project-link" href="{{ project.demo }}" target="_blank">
+            <img class="project-image" src="{{ project.image.url }}" alt="{{ project.title }}">
+          </a>
+        </div>
+        <div class="col-lg-8 mt-5">
+          <div class="project-title">{{ project.title }}</div>
+          <small>Built using: {{ project.codebase }}</small>
+          <p>
+            {{ project.explanation }}
+          </p>
+          <div class="buttons mt-5">
+            <a href="{{ project.source }}" target="_blank">View source</a>
+            <a href="{{ project.demo }}" target="_blank">Try it live</a>
+          </div>
         </div>
       </div>
-
-
-
-    </div>
-  {% endfor %}
-
-
-
-<br>
-<br>
-<br>
+    {% endfor %}
 
   </div>
 </section>
 <!--Projects end-->
 
-
-
-
-
-
-
-
-
-
-
 <!--Contact-->
 <section id="contact">
   <div class="container">
-    <h1 class="title text-left mt-5">Want to contact me?</h1>
 
-    <div class="col">
-      <p class="text-left">Please, use the form below or send an email to me</p>
+    <div class="row">
+      <h1 class="title text-left">Want to contact me?</h1>
     </div>
 
-    <form id="contact-form" action="post">
-      <input placeholder="Name" name="name" type="text" required="">
-      <input placeholder="Email" name="email" type="email" required="">
-      <textarea placeholder="Message" name="message"></textarea>
-      <input class="button" id="submit" type="submit" value="Submit">
-    </form>
+    <div class="row">
+      <div class="col">
+        <p class="text-left">Please, use the form below or send an email to me</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <form id="contact-form" action="post">
+          <input placeholder="Name" name="name" type="text" required="">
+          <input placeholder="Email" name="email" type="email" required="">
+          <textarea placeholder="Message" name="message"></textarea>
+          <input class="button" id="submit" type="submit" value="Submit">
+        </form>
+
+
+
+
+        <form method="post" class="uniForm">
+          {{ form|crispy }}
+          <input class="button" id="submit" type="submit" value="Submit">
+      </form>
+      </div>
+    </div>
 
   </div>
 </section>
