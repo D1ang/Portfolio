@@ -130,9 +130,14 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+# If in debug mode load in directory 'staticfiles' or get blank screens
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+if DEBUG == True:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+else:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
