@@ -1,18 +1,28 @@
 from django import forms
+from captcha.fields import ReCaptchaField
+from captcha.widgets import ReCaptchaV3
 
 
 class ContactForm(forms.Form):
     contact_name = forms.CharField(
-        label=('Name'),
-        required=True
+        label=(''),
+        required=True,
+        max_length=50,
+        widget=forms.TextInput(attrs={'placeholder': 'Name'})
     )
     contact_email = forms.EmailField(
-        label=('Email'),
-        required=True
-    )
-    content = forms.CharField(
-        label=('Message'),
+        label=(''),
         required=True,
-        max_length=250,
-        widget=forms.Textarea(attrs={'rows': 4})
+        max_length=150,
+        widget=forms.TextInput(attrs={'placeholder': 'Email'})
+    )
+    message = forms.CharField(
+        label=(''),
+        required=True,
+        max_length=500,
+        widget=forms.Textarea(attrs={'rows': 4, 'placeholder': 'Message'})
+    )
+    captcha = ReCaptchaField(
+        widget=ReCaptchaV3(attrs={'required_score':0.75}),
+        label=('')
     )
