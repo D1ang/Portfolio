@@ -8,7 +8,7 @@ admin.site.site_title = "Portfolio Admin Portal"
 admin.site.index_title = "Welcome to the Portfolio portal"
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('dashboard/', admin.site.urls),
     path('', include('home.urls', namespace='home')),
 ]
 
