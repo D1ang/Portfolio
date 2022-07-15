@@ -1,5 +1,4 @@
 # Portfolio
-**Portfolio 2.0: Full Stack Frameworks with Django**
 
 [![Build Status](https://app.travis-ci.com/D1ang/Portfolio.svg?branch=master)](https://app.travis-ci.com/D1ang/Portfolio)
 
@@ -8,47 +7,54 @@ The main goal of this portfolio is to promote my skills as a full stack develope
 For the visitors I would like to provide an easy to understand and clear overview of projects.
 
 In short:
- - A system for myself to maintain the portfolio site with the least effort.
- - An easy to navigate site for visitors.
+
+- A system for myself to maintain the portfolio site with the least effort.
+- An easy to navigate site for visitors.
 
 ## Demo
-A live demo version can be found **[here](https://heydjang.herokuapp.com/)**
+
+A live demo version can be found **[here](https://heydjang.com/)**
 
 ![Design](https://github.com/D1ang/Portfolio/blob/master/mockups/presentation.png)
 
 ## Table of Contents
-  * [UX](#ux)
-  * [User stories](#user-stories)
-    + [Strategy](#strategy)
-    + [Scope](#scope)
-    + [Structure](#structure)
-    + [Skeleton](#skeleton)
-    + [Surface](#surface)
-  * [Technologies](#technologies)
-    + [JavaScript Libraries](#javascript-libraries)
-    + [Python & Django Plugins](#python---django-plugins)
-  * [Features](#features)
-    + [Features Left to Implement](#features-left-to-implement)
-  * [Testing](#testing)
-  * [Bugs](#bugs)
-    + [CSS](#css)
-    + [JavaScript](#javascript)
-    + [Admin login gave a 500 error](#admin-login-gave-a-500-error)
-  * [Deployment](#deployment)
-    + [Deploy requirements](#deploy-requirements)
-    + [Local deployment](#local-deployment)
-    + [Heroku deployment](#heroku-deployment)
-  * [Credits](#credits)
-    + [Content](#content)
-    + [Media](#media)
-    + [Acknowledgements](#acknowledgements)
+
+- [Portfolio](#portfolio)
+  - [Demo](#demo)
+  - [Table of Contents](#table-of-contents)
+  - [UX](#ux)
+  - [User stories](#user-stories)
+    - [Strategy](#strategy)
+    - [Scope](#scope)
+    - [Structure](#structure)
+    - [Skeleton](#skeleton)
+    - [Surface](#surface)
+  - [Technologies](#technologies)
+    - [JavaScript Libraries](#javascript-libraries)
+    - [Python & Django Libraries](#python--django-libraries)
+  - [Features](#features)
+    - [Features Left to Implement](#features-left-to-implement)
+  - [Testing](#testing)
+  - [Bugs](#bugs)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Admin login gave a 500 error](#admin-login-gave-a-500-error)
+  - [Deployment](#deployment)
+    - [Deploy requirements](#deploy-requirements)
+    - [Local deployment](#local-deployment)
+    - [Heroku deployment](#heroku-deployment)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
 
 ## UX
+
 To make the portfolio as clear as possible to the end-user, a basic but very clean design has been chosen.
 Options are minimalistic and the end-user will not be overloaded with options to choose from.
-The navigation bar, buttons, cart system and dashboard have been built and have an easy to understand logic.
 
 ## User stories
+
 With years of field experience, we have built a well-known form and work ethic in creating designs.
 We asked our customers from day to day what they would like to see in a sample and came up with the following points:
 
@@ -64,22 +70,26 @@ We asked our customers from day to day what they would like to see in a sample a
  - As an employee, I want to search and filter the orders (search & filter)
 
 ### Strategy
+
 The goal of the system is to make it as easy as possible to access, short and informative, 
 while striving for a minimalist and user-friendly design.
 
 ### Scope
+
 For customers, we wanted to provide them with an easy to understand (first-view-use) system.
 This way, they would be able to request services: faster, easier and on their own, 
 so our studio employees have more free time for other job-related tasks and be able to do
 their service tasks more efficient.
 
 ### Structure
+
 The system is structured to get the right information as quickly as possible.
 The order of the options provided are placed in a logic workflow while the design provided will use a messages bar
 that should be easy to understand and gives the customer a straight away no-nonsense feedback.
 The navbar is available when needed and a footer is provided with contact-information below the page.
 
 ### Skeleton
+
 By using Figma and LucidChart the following wireframes were created:
 
 [Silkscreenservice wireframe](https://github.com/D1ang/Silkscreenservice/blob/master/mockups/wireframe.pdf)
@@ -89,6 +99,7 @@ By using Figma and LucidChart the following wireframes were created:
 [ERD wireframe](https://github.com/D1ang/Silkscreenservice/blob/master/mockups/model_diagram.png)
 
 ### Surface
+
 The colours chosen are yellow, red, black, and blue.
 Blue is the most used colour most associated with harmony, faithfulness, confidence, and imagination.
 A very clean, abstract and an almost childish design has been chosen to force the attention to the systems functionality.
@@ -98,6 +109,7 @@ As for the dashboard a lighter version of Poppins has been used as it looks very
 The buttons are styled in 2 versions; full black or black outlined, to fit the overall design.
 
 ## Technologies
+
  - Figma - *To create a wireframe*
  - Lucid Chart - *To create the Entity Relationship Diagram (ERD)*
  - HTML - *To create the basics*
@@ -112,12 +124,14 @@ The buttons are styled in 2 versions; full black or black outlined, to fit the o
  - GitHub Wiki TOC generator - *Generates a MarkDown TOC online*
 
 ### JavaScript Libraries
+
  - jQuery - *To improve input field feedback*
  - flatpickr - *lightweight, powerful JavaScript datetimepicker with no dependencies*
  - DataTables - *Adds advanced interaction controls to HTML tables*
  - Stripe - *For credit card transactions*
 
 ### Python & Django Libraries
+
  - pillow - *Python Imaging Library*
  - Stripe - *Credit card payments and transaction security*
  - boto3 - *To connect to AWS*
@@ -128,6 +142,7 @@ The buttons are styled in 2 versions; full black or black outlined, to fit the o
  - django-filter - *Easy searching and filtering query sets*
 
 ## Features
+
 This system is an e-commerce-based website with a simplistic but easy to understand build-up.
 Providing the user with 2 call-to-action buttons and a "read more" button, a choice can be made in seconds.
 The navbar is sticky but reacts on the users scrolling behaviour. While scrolling down the bar disappears to keep a clean screen estate,
@@ -144,18 +159,20 @@ As a user logs out the cart will be remembered in the system to be finished late
 When the customer checkout, a secured payment can be made with credit card and artwork can be uploaded, to be downloaded by the employees.
 
 ### Features Left to Implement
+
 In later releases I would like to add models for a comments/grade system, so customers can add comments or grade the provided services.
 Visitors would be able to read those. I would also like to add a function for admin to remove a customer.
 As of European law this should be possible.
 This can be done through the standard django admin, but it would be nicer and easier if this function is available through the custom-made dashboard.
 
 ## Testing
+
 This system was tested across multiple screen sizes on Chrome, Safari, and Internet Explorer.
 To ensure compatibility and responsiveness it is also tested on an android based mobile device (OnePlus5)
 and an older tablet device (Samsung Galaxy Tab2).
 The system has been field-tested by customers and employees.
 Some basic unit testing has been done with Travis and own written testcodes on the home and accounts app.
-Unit testing does not go as deep as the field tests, but does show that the bare basic functions are working correctly. 
+Unit testing does not go as deep as the field tests, but does show that the bare basic functions are working correctly.
 
 For testing the admin interface an admin test account has been created on the deployed version to Heroku.
 The logins are:
@@ -178,25 +195,30 @@ The following tests have been used to ensure proper site functionality:
 ## Bugs
 
 ### CSS
+
 CSS written code is tested with the W3C CSS Validator.
 As it does not give any problems, the deployed version of the site does gives a couple of warnings and errors coming
 from Bootstrap and the Font Awesome animations Library.
 
 ### JavaScript
+
 All 3 JavaScript’s in this system passed the test, only a couple of warnings came up through JSHint, for example: using "let", "const" but none of them are bug worthy.
 By using "ES6 Syntax Check" all the Syntax checks passed.
 
 ### Admin login gave a 500 error
+
 When a customer logged in, the system worked perfectly. But for the admin account a 500 error came up.
 This bug was fixed after making migrations and changed the max field characters to 50 chars.
 Seems that the admin entered email was 28 characters and when in an earlier build was set to 25, this error came up.
 
 ## Deployment
+
 The code of this system is hosted by using Heroku and Amazon S3, this code is deployed to GitHub directly from the master branch.
 The deployed site will update automatically upon new commits to the master branch.
 This code can be run locally or deployed to a live environment. Directions are based on deployment locally and to Heroku.
 
 ### Deploy requirements
+
  - [VScode](https://code.visualstudio.com/) *A tool to develop software*
  - [python 3](https://www.python.org/) *A programming language*
  - [PIP](https://pip.pypa.io/en/stable/installing/) *To get python installation packages*
@@ -206,6 +228,7 @@ This code can be run locally or deployed to a live environment. Directions are b
  - [Stripe](https://stripe.com/) *To securely collect credit card payments*
 
 ### Local deployment
+
 1.  Download a copy of the GitHub repository by clicking the "Code" button at the top right of the 
     GitHub page and in the submenu select "Download ZIP". Extract the zip file to a folder of choice on your system. If Git is installed on your system, you can clone the repository 
     with the following command:
@@ -354,13 +377,16 @@ To run this application in a cloud-based environment, you can deploy the code to
 ## Credits
 
 ### Content
+
 All text content for this system were written by me.
 The following site has been used as an inspiration for the overall design: [Illustrations.co](https://illlustrations.co/)
 
 ### Media
-Illustrations: https://illlustrations.co/
+
+
 
 ### Acknowledgements
+
 - Django Framework 3.0 Crash Course Tutorials [link](https://www.youtube.com/watch?v=xv_bwpA_aEA&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO)
 - freeCodeCamp.org - How to Build an E-commerce Website [link](https://www.youtube.com/watch?v=YZvRrldjf1Y)
 - W3schools.com [link](https://www.w3schools.com/)
