@@ -1,7 +1,7 @@
 # Portfolio
 **Portfolio 2.0: Full Stack Frameworks with Django**
 
-[![Build Status](https://travis-ci.org/D1ang/Portfolio.svg?branch=master)](https://travis-ci.org/D1ang/Portfolio)
+[![Build Status](https://app.travis-ci.com/D1ang/Portfolio.svg?branch=master)](https://app.travis-ci.com/D1ang/Portfolio)
 
 In order to have a place on the net to promote my projects this portfolio is created.
 The main goal of this portfolio is to promote my skills as a full stack developer.
