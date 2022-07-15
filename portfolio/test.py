@@ -13,7 +13,11 @@ DATABASES = {
 }
 
 # test should use local storage
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
-SECRET_KEY = "abc123"
+DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
+
+SECRET_KEY = 'abc123'
+
+RECAPTCHA_PUBLIC_KEY = 'abc123'
+RECAPTCHA_PRIVATE_KEY = 'abc123'
