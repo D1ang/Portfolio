@@ -259,7 +259,7 @@ This code can be run locally or deployed to a live environment. Directions are b
 
 To run this application in a cloud-based environment, you can deploy the code to Heroku. This section assumes you have succeeded at running the application in your local environment first, as described above.
 
-1. Login to Heroku and set up a new app with an unique name NOTE: heydjang is already taken :smile:
+1. Login to Heroku and set up a new app with an unique name `note:` heydjang is already taken :smile:
 1. On the Resources tab, in the Add-ons field type Heroku Postgres select the Hobby Dev then click the Provision button.
 1. After setting the Postgress database go back to the Settings tab and click Reveal Config Vars. Copy the values from your env.py file into Heroku. Make sure you load the following:
 
