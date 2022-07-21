@@ -41,6 +41,8 @@ ALLOWED_HOSTS = [
     'heydjang.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = ['heydjang.com']
+
 
 # Application definition
 
