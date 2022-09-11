@@ -161,9 +161,9 @@ By using "ES6 Syntax Check" all the Syntax checks passed.
 
 ## Deployment
 
-The code of this system is hosted by using Heroku, this code is deployed to GitHub directly from the master branch.
+The code of this system is hosted by using Railway, this code is deployed to GitHub directly from the master branch.
 The deployed site will update automatically upon new commits to the master branch.
-This code can be run locally or deployed to a live environment. Directions are based on deployment locally and to Heroku.
+This code can be run locally or deployed to a live environment. Directions are based on deployment locally and to Railway.
 
 ### Deploy requirements
 
@@ -254,72 +254,6 @@ This code can be run locally or deployed to a live environment. Directions are b
 
    If everything went correctly the terminal will provide a message telling that the development server is running
    at a provided URL mostly:  `http://127.0.0.1:8000/`
-
-### Heroku deployment
-
-To run this application in a cloud-based environment, you can deploy the code to Heroku. This section assumes you have succeeded at running the application in your local environment first, as described above.
-
-1. Login to Heroku and set up a new app with an unique name `note:` heydjang is already taken :smile:
-1. On the Resources tab, in the Add-ons field type Heroku Postgres select the Hobby Dev then click the Provision button.
-1. After setting the Postgress database go back to the Settings tab and click Reveal Config Vars. Copy the values from your env.py file into Heroku. Make sure you load the following:
-
-    |:          Key           |:     Value     |
-    |:------------------------|:---------------|
-    | DATABASE_URL            |  <your_value>  |
-    | SECRET_KEY              |  <your_value>  |
-    | RECAPTCHA_PUBLIC_KEY    |  True          |
-    | RECAPTCHA_PRIVATE_KEY   |  True          |
-    | DEVELOPMENT             |  False         |
-
-    Grab the DATABASE_URL link from Heroku's Config Vars as we gonna need it later to migrate
-    to the Heroku Postgres database.
-
-1. Now that the database on Heroku is created the following rule needs to be added to the env.py file
-
-   ```bash
-   os.environ.setdefault('DATABASE_URL', '<your postgres url grabbed from Heroku>')
-   ```
-
-   >Be assured to not share this URL with anybody.
-
-1. Because this is a new database connection, the migrate command must be executed with the following command in your terminal:
-
-   ```bash
-   python manage.py migrate
-   ```
-
-   >Do not forget to reactivate your virtual environment if the system or IDE is rebooted.
-
-1. Create the superuser for the postgres database so you can have access to the django admin.
-
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-1. Now we need to add the required data into the database in the following order:
-
-   ```python
-   python manage.py loaddata projects.json
-   python manage.py loaddata videos.json
-   ```
-
-1. With everything set push the code to a GitHub account of yourself:
-
-   ```bash
-   git init
-   git commit -m 'getting ready to deploy to Heroku'
-   git push -u origin
-   ```
-
-1. From the Heroku dashboard of your newly created application, click on the "Deploy" tab, then scroll down to the "Deployment method" section and select GitHub.
-
-1. Use the GitHub link and type in the name of the repository and click the search button. Then connect the Heroku app to the desired GitHub repository.
-
-1. On the Deployment Tab, scroll a bit further down to the "Manual Deploy" section, select the master branch then click "Deploy Branch".
-
-1. Once your application is running, you may want to update the Deployment method from Manual to Automatic.
-
-1. From the Heroku dashboard select the Open app button on the top right.
 
 ### Content
 
