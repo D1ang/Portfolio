@@ -41,7 +41,6 @@ A live demo version can be found **[here](https://heydjang.com/)**
   - [Deployment](#deployment)
     - [Deploy requirements](#deploy-requirements)
     - [Local deployment](#local-deployment)
-    - [Heroku deployment](#heroku-deployment)
     - [Content](#content)
 
 ## UX
