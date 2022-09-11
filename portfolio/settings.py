@@ -37,7 +37,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
-    'heydjang.herokuapp.com',
+    'heydjangcom-production.up.railway.app',
     'heydjang.com'
 ]
 
