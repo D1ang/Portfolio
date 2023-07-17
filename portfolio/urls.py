@@ -10,6 +10,7 @@ admin.site.index_title = "Welcome to the Portfolio portal"
 urlpatterns = [
     path('dashboard/', admin.site.urls),
     path('', include('home.urls', namespace='home')),
+    path('__debug__/', include('debug_toolbar.urls')),
 ]
 
 if settings.DEBUG:
