@@ -41,11 +41,7 @@ if DEBUG:
     INTERNAL_IPS = [ip[: ip.rfind(".")] + ".1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
 
 
-ALLOWED_HOSTS = [
-    '127.0.0.1',
-    'heydjangcom-production.up.railway.app',
-    'heydjang.com'
-]
+ALLOWED_HOSTS = [os.getenv('HOSTS')]
 
 INTERNAL_IPS = [
     '127.0.0.1',
