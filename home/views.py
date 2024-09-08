@@ -17,6 +17,7 @@ def index(request):
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
+
         if form.is_valid():
             subject = 'Hey Djang! contact form'
             body = {
@@ -27,7 +28,7 @@ def index(request):
             message = '\n'.join(body.values())
 
             try:
-                send_mail(subject, message, 'django.heimgartner@gmail.com', ['django.heimgartner@gmail.com'])
+                send_mail(subject, message, 'info@tanooki.nl', ['info@tanooki.nl'])
             except BadHeaderError:
                 return HttpResponse('invalid header found.')
             return redirect('home:index')

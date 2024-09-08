@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class ProjectItem(models.Model):
     """
     A model for the project items.

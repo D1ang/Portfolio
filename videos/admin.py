@@ -8,4 +8,5 @@ class VideoItemAdmin(admin.ModelAdmin):
         'title',
     )
 
+
 admin.site.register(VideoItem, VideoItemAdmin)

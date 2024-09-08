@@ -8,4 +8,5 @@ class ProjectItemAdmin(admin.ModelAdmin):
         'title',
     )
 
+
 admin.site.register(ProjectItem, ProjectItemAdmin)

@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class VideoItem(models.Model):
     """
     A model for the video items.

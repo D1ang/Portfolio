@@ -1,6 +1,6 @@
 from django import forms
-from captcha.fields import ReCaptchaField
-from captcha.widgets import ReCaptchaV3
+from django_recaptcha.fields import ReCaptchaField
+from django_recaptcha.widgets import ReCaptchaV3
 
 
 class ContactForm(forms.Form):
@@ -23,6 +23,6 @@ class ContactForm(forms.Form):
         widget=forms.Textarea(attrs={'rows': 4, 'placeholder': 'Message'})
     )
     captcha = ReCaptchaField(
-        widget=ReCaptchaV3(attrs={'required_score':0.75}),
+        widget=ReCaptchaV3(attrs={'required_score': 0.75}),
         label=('')
     )
