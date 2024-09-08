@@ -1,10 +1,11 @@
-# Exclude Django created local def folders
+
+# ---------------------------- Database files --------------------------- #
+
 *.sqlite3
 *.pyc
 __pycache__
 
-# Exclude VScode created def folders
+# ------------------------- IDE files & folders ------------------------- #
+
 .vscode
 .env
-env.py
-

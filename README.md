@@ -1,11 +1,7 @@
 # Portfolio
 
-[![Build Status](https://app.travis-ci.com/D1ang/Portfolio.svg?branch=master)](https://app.travis-ci.com/D1ang/Portfolio)
-
-![Design](https://github.com/D1ang/Portfolio/blob/master/mockups/presentation.png)
-
 In order to have a place on the net to promote my projects this portfolio is created.
-The main goal of this portfolio is to promote my skills as a full stack developer.
+The main goal of this portfolio is to promote my skills as a software developer.
 For the visitors I would like to provide an easy to understand and clear overview of projects.
 
 In short:
@@ -31,7 +27,7 @@ A live demo version can be found **[here](https://heydjang.com/)**
     - [Skeleton](#skeleton)
   - [Technologies](#technologies)
     - [JavaScript Libraries](#javascript-libraries)
-    - [Python & Django Libraries](#python--django-libraries)
+    - [Python \& Django Libraries](#python--django-libraries)
   - [Features](#features)
     - [Features Left to Implement](#features-left-to-implement)
   - [Testing](#testing)
@@ -128,7 +124,7 @@ blog functionality would be nice...
 ## Testing
 
 This system was tested across multiple screen sizes on Chrome, Brave & Safari
-To ensure compatibility and responsiveness it is also tested on an android based mobile device (OnePlus5)
+To ensure compatibility and responsiveness it is also tested on an android based mobile device (Android device)
 The system has been field-tested by friends, colleagues and family.
 Some basic unit testing has been done with Travis and own written testcodes on the home app.
 Unit testing does not go as deep as the field tests, but does show that the bare basic functions are working correctly.
@@ -143,7 +139,6 @@ The following tests have been used to ensure proper site functionality:
 - [JSHint](https://jshint.com/): A static code analysis tool for JavaScript.
 - [ES6 Syntax Check](https://www.piliapp.com/syntax-check/es6/): An online ECMAScript 6 Checker.
 - [Visual Studio Code](https://code.visualstudio.com/): Using the built-in tools to test on proper code, like flake8 linter.
-- [Travis](https://travis-ci.org/): Used halfway the project to test the code.
 
 ## Bugs
 
@@ -160,9 +155,9 @@ By using "ES6 Syntax Check" all the Syntax checks passed.
 
 ## Deployment
 
-The code of this system is hosted by using Railway, this code is deployed to GitHub directly from the master branch.
-The deployed site will update automatically upon new commits to the master branch.
-This code can be run locally or deployed to a live environment. Directions are based on deployment locally and to Railway.
+This code is deployed to GitHub directly from the main branch.
+The deployed site will update automatically upon new commits to the main branch.
+This code can be run locally or deployed to a live environment. Directions are based on deployment locally or on any PaaS.
 
 ### Deploy requirements
 
@@ -210,15 +205,14 @@ This code can be run locally or deployed to a live environment. Directions are b
    pip install -r requirements.txt
    ```
 
-1. Create a new file at the base directory level called env.py and copy the following into the created env.py file:
+1. Create a new file at the base directory level called .env and copy the following into the created .env file:
 
    ```bash
-   import os
-
-   os.environ.setdefault('DEVELOPMENT', 'True')
-   os.environ.setdefault('SECRET_KEY', 'your_value')
-   os.environ.setdefault('RECAPTCHA_PUBLIC_KEY', 'True')
-   os.environ.setdefault('RECAPTCHA_PRIVATE_KEY', 'True')
+   SECRET_KEY=<your_value>
+   DEBUG=False
+   RECAPTCHA_PUBLIC_KEY=<your_value>
+   RECAPTCHA_PRIVATE_KEY=<your_value>
+   DATABASE_URL=<your_value>
    ```
 
    Replace <your_value> with the values from your own created accounts:
@@ -239,10 +233,8 @@ This code can be run locally or deployed to a live environment. Directions are b
 1. Now that the server is running, we need to add the required data into the database in the following order:
 
    ```python
-   python manage.py loaddata groups.json
-   python manage.py loaddata customers.json
-   python manage.py loaddata itemtags.json
-   python manage.py loaddata items.json
+   python manage.py loaddata projects.json
+   python manage.py loaddata videos.json
    ```
 
 1. Finally start your server by running the following management command in the terminal:
