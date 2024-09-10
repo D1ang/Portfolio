@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700");
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: hsl(224, 17%, 17%);
+  background: hsl(0, 0%, 98%);
+  font-size: 62.5%;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+a, a:visited {
+  text-decoration: none;
+  transition: 200ms;
+  -webkit-transition: 200ms;
+}
+
+.title {
+  padding: 80px 0 40px 0;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 5em
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% include "theme/partials/head/meta.html" %}
+    {% include "theme/partials/head/css.html" %}
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+    {% block navbar %}
+        {% include 'theme/partials/top_navbar.html' %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+        {% include 'theme/partials/footer.html' %}
+    {% endblock %}
+
+    {% include "theme/partials/head/js.html" %}
+    {% block js %}{% endblock %}
+</body>
+
+</html>
