@@ -1,35 +1,31 @@
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 import dj_database_url
+import environ
 import os
 
+
+env = environ.FileAwareEnv(
+    # Set casting, default values for env's
+    DEBUG=(bool, False),
+)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
 # False if not in os.environ because of casting above
-DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
-DEBUG = True
+DEBUG = env('DEBUG')
 
-SECRET_KEY = os.environ.get('SECRET_KEY', default=get_random_secret_key())
+SECRET_KEY = env('SECRET_KEY', default=get_random_secret_key())
 
-
-if DEBUG:
-    import socket  # only if you haven't already imported this
-    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-    INTERNAL_IPS = [ip[: ip.rfind(".")] + ".1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]
-
-
-ALLOWED_HOSTS = [os.getenv('HOSTS'), '127.0.0.1']
-
-INTERNAL_IPS = [
-    '127.0.0.1',
-]
+HOST_DNS = env.str('HOST_NAME', 'heydjang.com')
+ALLOWED_HOSTS = [HOST_DNS, '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = ['https://*.heydjang.com']
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -43,14 +39,18 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'django_recaptcha',
 
-    # own build apps
+    # build apps
+    'theme',
     'home',
     'videos',
     'projects',
-
-    # debug  <---- change when on debug!!!!!!
-    'debug_toolbar',
 ]
+
+# Enable debug toolbar
+if DEBUG:
+    INSTALLED_APPS += ['debug_toolbar']
+    INTERNAL_IPS = ['127.0.0.1']
+
 
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'theme', 'templates')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,16 +90,16 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-      'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
+if DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
+    }
+else:
+    DATABASES = {
+      'default': dj_database_url.parse(env.str('DATABASE_URL'))
     }
 
 
@@ -141,8 +141,6 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 STATIC_URL = 'static/'
-
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'theme', 'static'),)
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -154,10 +152,10 @@ MEDIA_URL = 'media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-MAIL = os.environ.get('MAIL')
-
 # django-recaptcha
 # https://github.com/praekelt/django-recaptcha
 
-RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY', '')
-RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY', '')
+RECAPTCHA_PUBLIC_KEY = env.str('RECAPTCHA_PUBLIC_KEY', '')
+RECAPTCHA_PRIVATE_KEY = env.str('RECAPTCHA_PRIVATE_KEY', '')
+
+MAIL = env.str('MAIL')
