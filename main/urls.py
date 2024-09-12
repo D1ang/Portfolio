@@ -14,7 +14,8 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
+    # Loading debug toolbar when `DEBUG` is True
     urlpatterns += path('__debug__/', include('debug_toolbar.urls')),
 
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # Media files will not load if `DEBUG` is true without this rule
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

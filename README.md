@@ -105,7 +105,7 @@ For this project there is no skeleton available, as I build it on the go right f
 - pillow - *Python Imaging Library*
 - django-crispy-forms - *Controls the rendering behaviour of Django forms*
 - django-jazzmin - *Bootstrap 4 django admin interface*
-- whitenoise - *Radically simplified static file serving for Python web apps*
+- botos3 - *The AWS Software Development Kit for Python*
 
 ## Features
 
