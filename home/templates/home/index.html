@@ -20,18 +20,17 @@
                 <span class="line">a software developer</span>
             </h1>
             <div class="buttons">
-                <a href="#projects">See my projects</a>
-                <a href="#about" class="filled">Get to know me</a>
+                <a href="#projects">see my projects</a>
+                <a href="#about" class="filled">get to know me</a>
             </div>
         </div>
     </header>
 
     {# About #}
     <section id="about">
-        <div class="container-fluid">
-
+        <div class="container">
             <div class="row">
-                <h1 class="title text-center">Who am I?</h1>
+                <h1 class="title text-center">{{ content.about_title }}</h1>
             </div>
 
             <div class="row">
@@ -41,17 +40,7 @@
                             <img class="profile-img float-start" src="{% static 'home/img/profile.png' %}" alt="Hello I'm Django">
                         </div>
                         <div class="col-lg-12 col-sm-12">
-                            <p>
-                                I am a software developer based in the Green Heart of the Netherlands.
-                            </p>
-                            <p>
-                                I enjoy solving puzzles and tackling problems, as well as making things intuitive and easy
-                                to use.
-                                I have an insatiable desire to keep learning— the more, the better.
-                                I also have a passion for video creation, a hobby I've taken on vacations ever since the
-                                days of camcorders.
-                                Oh, and games! I have a deep love for Nintendo games.
-                            </p>
+                            <p>{{ content.about_text }}</p>
                         </div>
                     </div>
                 </div>
@@ -87,17 +76,12 @@
         <div class="container">
 
             <div class="row mt-5">
-                <h1 class="title text-center">My projects</h1>
+                <h1 class="title text-center">{{ content.projects_title }}</h1>
             </div>
 
             <div class="row">
                 <div class="col">
-                    <p class="text-center">
-                        Here's a list of the projects I've been working on lately.
-                        All of these were built during my coding adventure on Code Institute,
-                        where I've been coding for almost 7 months non-stop until
-                        I completed all the milestone projects required to get my diploma in software development.
-                    </p>
+                    <p class="text-center">{{ content.projects_text }}</p>
                 </div>
             </div>
 

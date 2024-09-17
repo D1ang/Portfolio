@@ -1,0 +1,12 @@
+[
+    {
+        "model": "home.pagecontent",
+        "pk": 1,
+        "fields": {
+            "about_title": "Who am I?",
+            "about_text": "I am a software developer based in the Green Heart of the Netherlands. I enjoy solving puzzles and tackling problems, as well as making things intuitive and easy to use. I have an insatiable desire to keep learning— the more, the better. I also have a passion for video creation, a hobby I've taken on vacations ever since the days of camcorders. Oh, and games! I have a deep love for Nintendo games.",
+            "projects_title": "My projects",
+            "projects_text": "Here's a list of the projects I've been working on lately. All of these were built during my coding adventure on Code Institute, where I've been coding for almost 7 months non-stop until I completed all the milestone projects required to get my diploma in software development."
+        }
+    }
+]

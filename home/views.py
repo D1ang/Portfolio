@@ -1,4 +1,5 @@
 from django.shortcuts import redirect, render
+from home.models import PageContent
 from projects.models import ProjectItem
 from videos.models import VideoItem
 
@@ -12,6 +13,7 @@ def index(request):
     Load the homepage if there is no POST request.
     If POST load the data & send an email.
     """
+    content = PageContent.objects.first()
     projects = ProjectItem.objects.all()
     videos = VideoItem.objects.all()
 
@@ -36,6 +38,7 @@ def index(request):
     form = ContactForm
 
     context = {
+        'content': content,
         'projects': projects,
         'videos': videos,
         'form': form,
