@@ -210,13 +210,19 @@ textarea {
     color: #333;
 }
 
-/*------------------------Landing page container-------------------------*/
+/* -------------------------- Footer section --------------------------- */
 
 #footer {
-    margin-top: -80px;
+    margin-top: -70px;
     height: 300px;
     position: relative;
     z-index: 1;
+    clip-path: polygon(0 21%, 100% 4%, 100% 100%, 0% 100%);
     color: hsl(0, 0%, 98%);
-    background: hsl(0, 0%, 0%);
+    background: hsl(213, 19%, 12%)
+    
+}
+
+#footer p {
+    font-size: 1rem;
 }
