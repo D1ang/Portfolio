@@ -5,7 +5,7 @@ django-environ==0.11.*
 django-storages[s3]==1.14.*
 
 django-crispy-forms==2.3
-crispy_bootstrap4==2024.*
+crispy_bootstrap5==2024.*
 django-recaptcha==4.0.*
 
 # WSGI HTTP Server

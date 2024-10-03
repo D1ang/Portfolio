@@ -156,7 +156,7 @@ img {
     padding-bottom: 10%;
     position: relative;
     z-index: 1;
-    background: rgb(245, 245, 245);
+    background: hsl(0, 0%, 96%);
 }
 
 #contact h1 {
@@ -165,49 +165,25 @@ img {
 
 #contact p {
     font-size: 1.4rem;
-    color: rgb(129, 127, 127);
+    color: hsl(0, 1%, 50%);
 }
 
-input,
-textarea {
-    border: none;
-    padding: 1rem;
+#contact .project-card {
+    font-size: 1.1rem;
+    color: hsl(0, 1%, 50%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+#contact .btn-send {
     width: 100%;
-    height: 40%;
-    transition: 200ms;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="text"]:not(output):not(:focus),
-input[type="email"]:not(output):not(:focus),
-textarea {
-    border-bottom: 1px solid #070606;
-    background: transparent;
-    color: #130808;
-    font-size: 1.8rem;
-    box-shadow: none;
-    outline: none;
-}
-
-::-webkit-input-placeholder {
-    color: #333;
-}
-
-::-moz-placeholder {
-    color: #333;
-}
-
-:-ms-input-placeholder {
-    color: #333;
-}
-
-::-ms-input-placeholder {
-    color: #333;
-}
-
-::placeholder {
-    color: #333;
+    padding: 1rem;
+    background: hsl(168, 64%, 52%);
+    border: 1px solid hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 98%);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-decoration: none;
 }
 
 /* -------------------------- Footer section --------------------------- */
