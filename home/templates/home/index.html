@@ -59,44 +59,44 @@
         </div>
     </section>
 
-    <!--Projects-->
+    {# Projects #}
     <section id="projects">
         <div class="container">
 
             <div class="row mt-5">
-                <h1 class="title text-center">{{ content.projects_title }}</h1>
+                <h1 class="title text-center text-white">{{ content.projects_title }}</h1>
             </div>
 
             <div class="row">
                 <div class="col">
+                    {# Projects introduction #}
                     <p class="text-center">{{ content.projects_text }}</p>
                 </div>
             </div>
 
             {% for project in projects %}
-            <div class="row project-card my-5 p-4">
-                <div class="col-lg-4">
-                    <a class="project-link" href="{{ project.demo }}" target="_blank">
-                        <img class="project-image" src="{{ project.image.url }}" alt="{{ project.title }}">
-                    </a>
-                </div>
-                <div class="col-lg-8 mt-5">
-                    <div class="project-title">{{ project.title }}</div>
-                    <small>Built using: {{ project.codebase }}</small>
-                    <p>
-                        {{ project.explanation }}
-                    </p>
-                    <div class="buttons mt-5">
-                        <a href="{{ project.source }}" target="_blank">View source</a>
-                        <a href="{{ project.demo }}" target="_blank">Try it live</a>
+                <div class="row project-card my-5 mx-2 p-4">
+                    <div class="col-lg-4 mb-2">
+                        <a class="project-link" href="{{ project.demo }}" target="_blank">
+                            <img class="project-image" src="{{ project.image.url }}" alt="Project: {{ project.title }}">
+                        </a>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="project-title">{{ project.title }}</div>
+                        <p>{{ project.explanation }}</p>
+                        <small>Built using: {{ project.codebase }}</small>
+
+                        <div class="buttons mt-4">
+                            <a href="{{ project.source }}" target="_blank"><i class="fa-solid fa-code"></i> View source</a>
+                            <a href="{{ project.demo }}" target="_blank"><i class="fa-solid fa-satellite-dish"></i> Try it live</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             {% endfor %}
 
         </div>
     </section>
-    <!--Projects end-->
 
     <!--Contact-->
     <section id="contact">

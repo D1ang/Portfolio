@@ -72,7 +72,7 @@ img {
     position: relative;
     z-index: 2;
     clip-path: polygon(0 90%, 20% 100%, 100% 90%, 100% 0, 0 0);
-    background: rgb(24, 29, 35) url(../svg/surface.svg) no-repeat;
+    background: hsl(213, 19%, 12%) url(../svg/surface.svg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
@@ -85,22 +85,33 @@ img {
 
 #projects p {
     font-size: 1.4rem;
-    color: rgb(255, 255, 255);
+    color: hsl(0, 0%, 100%);
 }
 
 #projects small {
-    color: rgb(129, 129, 129);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 59%);
 }
 
 #projects .project-card {
-    background-color: rgba(88, 88, 88, 0.28);
+    font-weight: 300;
+    background-color: hsla(0, 0%, 35%, 0.28);
+}
+
+#projects .project-image {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.3);
+    filter: saturate(0);
+    transition: all 300ms;
 }
 
 #projects .project-link {
     display: block;
     overflow: hidden;
     border-radius: 50%;
-    border: 1px solid #fafafa;
+    border: 1px solid hsl(0, 0%, 98%);
     transition: 300ms;
 }
 
@@ -109,23 +120,15 @@ img {
     transform: scale(1.05);
 }
 
-#projects .project-image {
-    width: 100%;
-    height: 100%;
-    transform: scale(1.2);
-    filter: saturate(0);
-    transition: all 300ms;
-}
-
 #projects .project-title {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: 0;
-    color: rgb(54, 211, 180);
+    color: hsl(168, 64%, 52%);
 }
 
 #projects .buttons {
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
 }
@@ -133,19 +136,19 @@ img {
 #projects .buttons a {
     width: 49%;
     padding: .5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
-    color: #252934;
-    background: #fafafa;
+    color: hsl(224, 17%, 17%);
+    background: hsl(0, 0%, 98%);
 }
 
 #projects .buttons a:hover {
     text-decoration: none;
-    color: #fafafa;
-    background: rgb(54, 211, 180);
+    color: hsl(0, 0%, 98%);
+    background: hsl(168, 64%, 52%);
 }
 
-/*----------------------------Contact section----------------------------*/
+/* -------------------------- Contact section -------------------------- */
 
 #contact {
     min-height: 100%;
