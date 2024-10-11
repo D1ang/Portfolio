@@ -4,6 +4,7 @@ from projects.models import ProjectItem
 from videos.models import VideoItem
 
 from postoffice.forms import ContactForm
+from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 
@@ -36,7 +37,8 @@ def index(request):
                 }
                 message = '\n'.join(body.values())
 
-                send_mail(subject, message, 'info@tanooki.nl', ['info@tanooki.nl'])
+                receiver = settings.EMAIL_HOST_USER
+                send_mail(subject, message, receiver, [receiver])
             except BadHeaderError:
                 return HttpResponse('invalid header found.')
             return redirect('home:index')
