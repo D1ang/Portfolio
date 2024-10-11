@@ -5,9 +5,6 @@ from crispy_forms.layout import Layout
 from crispy_forms.layout import Submit
 from crispy_bootstrap5.bootstrap5 import FloatingField
 
-from django_recaptcha.fields import ReCaptchaField
-from django_recaptcha.widgets import ReCaptchaV3
-
 
 class ContactForm(forms.ModelForm):
     """
@@ -40,7 +37,3 @@ class ContactForm(forms.ModelForm):
         self.helper.form_method = 'post'
         self.helper.form_action = 'submit_form'
         self.helper.add_input(Submit('submit', 'Send your message', css_class='btn btn-send btn-lg rounded-0'))
-
-    captcha = ReCaptchaField(
-        widget=ReCaptchaV3(attrs={'required_score': 0.75}),
-    )
