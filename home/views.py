@@ -22,10 +22,11 @@ def index(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
 
-        # Save copy to database
-        form.save()
-
         if form.is_valid():
+
+            # Save copy to database
+            form.save()
+
             # Try sending with SMTP
             try:
                 subject = 'Hey Djang! contact form'
