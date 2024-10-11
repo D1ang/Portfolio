@@ -175,7 +175,7 @@ img {
 }
 
 #contact .btn-send {
-    width: 100%;
+    width: 25%;
     padding: 1rem;
     background: hsl(168, 64%, 52%);
     border: 1px solid hsl(0, 0%, 98%);
@@ -196,7 +196,6 @@ img {
     clip-path: polygon(0 21%, 100% 4%, 100% 100%, 0% 100%);
     color: hsl(0, 0%, 98%);
     background: hsl(213, 19%, 12%)
-    
 }
 
 #footer p {
