@@ -212,8 +212,6 @@ This code can be run locally or deployed to a live environment. Directions are b
    DEBUG=False
    HOST_NAME=heydjang.com
    MAIL=<your_value>
-   RECAPTCHA_PUBLIC_KEY=<your_value>
-   RECAPTCHA_PRIVATE_KEY=<your_value>
    DATABASE_URL=<your_value>
    NIXPACKS_PYTHON_VERSION=3.12
    ```
