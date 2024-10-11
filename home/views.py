@@ -3,7 +3,7 @@ from home.models import PageContent
 from projects.models import ProjectItem
 from videos.models import VideoItem
 
-from .forms import ContactForm
+from postoffice.forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 
@@ -22,15 +22,20 @@ def index(request):
         form = ContactForm(request.POST)
 
         if form.is_valid():
-            subject = 'Hey Djang! contact form'
-            body = {
-                'name': form.cleaned_data['name'],
-                'email': form.cleaned_data['email'],
-                'message': form.cleaned_data['message'],
-            }
-            message = '\n'.join(body.values())
 
+            # Save copy to database
+            form.save()
+
+            # Try sending with SMTP
             try:
+                subject = 'Hey Djang! contact form'
+                body = {
+                    'name': form.cleaned_data['name'],
+                    'email': form.cleaned_data['email'],
+                    'message': form.cleaned_data['message'],
+                }
+                message = '\n'.join(body.values())
+
                 send_mail(subject, message, 'info@tanooki.nl', ['info@tanooki.nl'])
             except BadHeaderError:
                 return HttpResponse('invalid header found.')

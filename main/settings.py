@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'videos',
     'projects',
+    'postoffice',
 ]
 
 # Enable debug toolbar
@@ -182,13 +183,21 @@ if USE_AWS is True:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# Email settings
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = env.str('EMAIL_HOST')
+EMAIL_USE_TLS = env.str('EMAIL_USE_TLS')
+EMAIL_PORT = env.str('EMAIL_PORT')
+EMAIL_HOST_USER = env.str('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env.str('EMAIL_HOST_PASSWORD')
+
+
 # django-recaptcha
 # https://github.com/praekelt/django-recaptcha
 
 RECAPTCHA_PUBLIC_KEY = env.str('RECAPTCHA_PUBLIC_KEY', '')
 RECAPTCHA_PRIVATE_KEY = env.str('RECAPTCHA_PRIVATE_KEY', '')
-
-MAIL = env.str('MAIL')
 
 
 # Load additional settings

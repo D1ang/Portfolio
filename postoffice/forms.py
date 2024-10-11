@@ -1,4 +1,5 @@
 from django import forms
+from postoffice.models import Mail
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout
 from crispy_forms.layout import Submit
@@ -8,13 +9,14 @@ from crispy_bootstrap5.bootstrap5 import FloatingField
 # from django_recaptcha.widgets import ReCaptchaV3
 
 
-class ContactForm(forms.Form):
-    name = forms.CharField(label='Name', max_length=50, required=True)
-    email = forms.EmailField(label='Email', max_length=50, required=True)
-    message = forms.CharField(
-        max_length=500, required=True,
-        widget=forms.Textarea(attrs={'placeholder': 'Message'})
-    )
+class ContactForm(forms.ModelForm):
+    """
+    Contact form all mails are send to
+    the database.
+    """
+    class Meta:
+        model = Mail
+        fields = '__all__'
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -38,8 +40,6 @@ class ContactForm(forms.Form):
         self.helper.form_method = 'post'
         self.helper.form_action = 'submit_form'
         self.helper.add_input(Submit('submit', 'Send your message', css_class='btn btn-send btn-lg rounded-0'))
-
-
 
     # captcha = ReCaptchaField(
     #     widget=ReCaptchaV3(attrs={'required_score': 0.75}),
