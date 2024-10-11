@@ -43,5 +43,4 @@ class ContactForm(forms.ModelForm):
 
     captcha = ReCaptchaField(
         widget=ReCaptchaV3(attrs={'required_score': 0.75}),
-        label=('')
     )
