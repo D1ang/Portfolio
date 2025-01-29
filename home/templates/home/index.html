@@ -117,6 +117,7 @@
             <div class="row project-card mx-2 px-2 py-4">
                 <div class="col">
                     <form method="post">
+                        {% csrf_token %}
                         {% crispy contact_form contact_form.helper %}
                     </form>
                 </div>

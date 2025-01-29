@@ -17,17 +17,10 @@ def index(request):
     content = PageContent.objects.first()
     projects = ProjectItem.objects.all()
     videos = VideoItem.objects.all()
-    contact_form = ContactForm
 
     if request.method == 'POST':
         form = ContactForm(request.POST)
-
         if form.is_valid():
-
-            # Save copy to database
-            form.save()
-
-            # Try sending with SMTP
             try:
                 subject = 'Hey Djang! contact form'
                 body = {
@@ -36,18 +29,18 @@ def index(request):
                     'message': form.cleaned_data['message'],
                 }
                 message = '\n'.join(body.values())
-
                 receiver = settings.EMAIL_HOST_USER
                 send_mail(subject, message, receiver, [receiver])
             except BadHeaderError:
                 return HttpResponse('invalid header found.')
             return redirect('home:index')
+    else:
+        form = ContactForm()
 
     context = {
         'content': content,
         'projects': projects,
         'videos': videos,
-        'contact_form': contact_form,
+        'contact_form': form,
     }
-
     return render(request, 'home/index.html', context)
